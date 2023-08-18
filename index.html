@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jayandhan - Portfolio Site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- add icon link -->
+    <link rel = "icon" href = "PICS/lo.png" type = "image/x-icon">
+</head>
+
+
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    
+    <div id="loader-wrapper">
+        <div id="loader"></div>   
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">Jaya</span>ndhan</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#qualification" class="nav-item nav-link">Quality</a>
+                <a href="#skill" class="nav-item nav-link">Skill</a>
+                <!-- <a href="#service" class="nav-item nav-link">Service</a> -->
+                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                <!-- <a href="#testimonial" class="nav-item nav-link">Review</a> -->
+                <a href="#blog" class="nav-item nav-link">Blog</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+            <img src="img/blue_pro.png" id="icon">        
+            <a href="#contact" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
+            <button onclick="myFunction()" class="btn btn-outline-primary mr-4" class="btn btn-counter multiple-count" data-count="0"style="margin-left:1rem">Like💖</button>
+            <!-- The actual snackbar -->
+            <div id="snackbar">
+                Awesome! 10Q
+            </div> 
+            </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal End -->
+    <div class="container-fluid"></div>
+    
+    <!-- Header Start -->
+
+
+
+
+
+
+
+    
+   
+
+
+    <!-- paste here link of pic -->
+    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh; background-image: url(' paste here ');   
+    background-repeat: repeat; animation: gradientpro 60s linear infinite;">
+        <div class="container">
+            
+            <div class="row align-items-center">
+                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="PICS/me.jpeg" alt="">
+                </div>
+                <div class="col-lg-7 text-center text-lg-left">
+                    
+                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Jayandhan</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <div class="typed-text d-none">Freelancer, Hungry learner, Web Designer, Web Developer, Front End Developer</div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a href="resume/RESUME.pdf" class="btn btn-outline-light mr-5">Download CV</a>
+
+
+                        <button type="button" id="play-btn" class="btn-play">
+                            <span></span>
+                        </button>
+                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
+
+
+
+                        <div id="video-modal" class="modal fade">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                  <video id="my-video" width="100%" height="auto" controls>
+                                    <source src="vid/jdintro.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                  </video>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+                          <div class="ghost">
+                            <div class="top-ghost">
+                              <div class="face">
+                                <div class="eyes">
+                                  <div class="eye"></div>
+                                  <div class="eye"></div>
+                                </div>
+                                <div class="mouth"></div>
+                              </div>
+                            </div>
+                            <div class="bottom-ghost">
+                              <div class="leg"></div>
+                              <div class="leg"></div>
+                              <div class="leg"></div>
+                              <div class="leg"></div>
+                            </div>
+                          </div>
+
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+
+<!-- 
+
+
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+
+    <svg viewBox="0 0 1320 300">
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+            webstoryboy
+        </text>
+    </svg>	
+     -->
+
+     
+
+     
+
+
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="PICS/flo2.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+
+
+                    <h3 class="mb-4">Cyber Security Enthusiast and Learner</h3>
+                    <p>       As an aspiring <b>cyber security professional</b> with a <b>passion for network design, malware handling, and quick learning,</b>
+                         I am dedicated to delivering <b>high-quality work</b> and <b>contributing to the advancement</b> of the field.
+                         <br>
+                         <br>
+                          I have <b>honed</b> my skills through <b>academic projects, internships, and extracurricular activities,</b> and 
+                          I enjoy <b>writing and creating content</b> on <b>cyber security topics.</b>
+                           <b>Seeking opportunities</b> to expand my knowledge and <b>make a positive impact</b> in the industry.</p>
+                    
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2"><h6><b>Name:</b> <span class="text-secondary"><b>Jayandhan</b></span></h6></div>
+                        <div class="col-sm-6 py-2"><h6><b>Birthday:</b> <span class="text-secondary"><b>22 December 2003</b></span></h6></div>
+                        <div class="col-sm-6 py-2"><h6><b>Degree:</b> <span class="text-secondary"><b>Bachelor in Computer Science</b></span></h6></div>
+                        <div class="col-sm-6 py-2"><h6><b>Experience:</b> <span class="text-secondary"><a href="#qualification" class="btn" style="padding: 0.1875rem 0.1875rem"><b>click here</b></a></span></h6></div>
+                        <div class="col-sm-6 py-2"><h6><b>Email:</b> <span class="text-secondary"><b>jayandhanadvanced03@gmail.com</b></span></h6></div>
+                        <!-- <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div> -->
+                    </div>
+                    <a href="#contact" class="btn btn-outline-primary mr-4">Hire Me</a>
+                    <a href="https://taplink.cc/iamjayandhan" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Qualification Start -->
+    <div class="container-fluid py-5" id="qualification">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Education</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">SSLC</h5>
+                            <p class="mb-2"><strong>CMS Matriculation Higher Secondary School</strong> | <small><b>Mar 2019</b></small></p>
+                            <p>Register NO: <b>6303370</b><br>Percentage: <b>83%</b></p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Higher Secondary</h5>
+                            <p class="mb-2"><strong>CMS Matriculation Higher Secondary School</strong> | <small><b>May 2021</b></small></p>
+                            <p>Register NO: <b>3263767</b><br>Percentage: <b>88%</b></p>
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Bachelor In CSE</h5>
+                            <p class="mb-2"><strong>KGiSL Institute of Technology</strong> | <small><b>2021 - 2025</b></small></p>
+                            <p><b>Bachelor of Engineering (Computer Science)</b>, known as BE Computer Science in short,
+                                 is a <b>full-time engineering undergraduate degree course</b> in the field of <b>computer science.</b> 
+                                 It deals with the <b>design, maintenance, construction and operation of computer hardware and software.</b>
+                                  The duration of this course is <b>4 years</b> which are divided <b>into 8 semesters.</b> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3 class="mb-4">My Expericence</h3>
+                    <div class="border-left border-primary pt-2 pl-4 ml-2">
+                        <!-- <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Academic Expericence</h5>
+                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
+                            <p>As a college student with limited work experience,
+                                <br>
+                                Completed computer science projects including TicTacToe game in Python, network design using Cisco Packet Tracer, and a weather forecasting application.
+                                <br>
+                                Delivered 17+ presentations on various topics related to my field, effectively communicating the subject matter.</p>
+                        </div> -->
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Frontent Web Developer</h5>
+                            <p class="mb-2"><strong>KGXperience</strong> | <small><b>Apr 2022 - Apr 2023 · 1 yr</b></small></p>
+                            <p>After becoming <b>a member of the KGXperience club,</b> I started working as a <b>voluntary frontend web developer</b>
+                                 and gained <b>valuable experience</b> in the field.
+                            </p>
+                        </div>
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Content Creator</h5>
+                            <p cla  ss="mb-2"><strong>Youtube & Medium</strong> | <small><b>Mar 2022 - Present · 1 yr 5 mo</b></small></p>
+                            <p>I specialize in <b>cyber security education</b> and create <b>technical blogs</b> on <b>Medium</b> and awareness videos 
+                                on <b>YouTube</b> to empower people and organizations <b>to protect themselves against cyber attacks.</b>
+                            </p>
+
+                        </div>
+
+                        <div class="position-relative mb-4">
+                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <h5 class="font-weight-bold mb-1">Cyber Security Learner</h5>
+                            <p cla  ss="mb-2"><strong>Cyber Vault</strong> | <small><b>Feb 2023 - May 2023 · 3 mo</b></small></p>
+                            <p>Being a <b>member of the cyber vault club</b> has provided me with <b>invaluable experience</b> in cybersecurity. 
+                            </p>
+                                *LINKS ARE PROVIDED BELOW THE CONTACT SECTION*
+                                <a href="#contact" class="btn" style="padding: 0.1875rem 0.1875rem"><b>Take me there</b></a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Qualification End -->
+
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">HTML & CSS</h6>
+                            <h6 class="font-weight-bold">80%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Python, C, Java</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Oracle VirtualBox & VMWare Workstation</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Presentation & Communication skills</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Critical thinking and problem solving</h6>
+                            <h6 class="font-weight-bold">95%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Professionalism and strong work ethic</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skill End -->
+
+
+
+    <!-- Services Start -->
+    <!-- <div class="container-fluid pt-5" id="service">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Design</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="https://linktr.ee/jayandhan.r">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Web Development</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="https://linktr.ee/jayandhan.r">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Apps Design</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="https://linktr.ee/jayandhan.r">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Apps Development</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="https://linktr.ee/jayandhan.r">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">SEO</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="https://linktr.ee/jayandhan.r">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Content Creating</h4>
+                    </div>
+                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="https://linktr.ee/jayandhan.r">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Services End -->
+
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid pt-5 pb-3" id="portfolio">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
+                        <li class="btn btn-sm btn-outline-primary m-1 " data-filter=".first">Cyber Course</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Design</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">OS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="PICS/Ethical_Hacking_Essentials(EHE).png" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/Ethical_Hacking_Essentials(EHE).png" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="PICS/donut_side.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/donut_side.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-auto" src="PICS/double_VM.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/double_VM.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="PICS/wireshark(1).jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/wireshark(1).jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="PICS/_2.png" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/_2.png" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="PICS/ubuntu.jpg">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/ubuntu.png" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-50" src="PICS/MeitY.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/MeitY.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="PICS/_3.png">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/_3.png" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="PICS/kali.webp">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="PICS/kali.webp" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-fluid py-5" id="testimonial">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">"People work better when they know what the goal is and why. It is important that people look forward to coming to work in the morning and enjoy working."</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/elo.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Elon Musk</h5>
+                            <span>Chief Executive Officer of Twitter</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">"You might fail a few times, but that’s Ok. you end up doing something worthwhile which you learn a great deal from."</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/sundar.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Sundar Pichai</h5>
+                            <span>Chief Executive Officer of Google</span>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
+                            <h4 class="font-weight-light mb-4">"The advance of technology is based on making it fit in so that you don't really even notice it, so it's part of everyday life."</h4>
+                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/bi.jpg" style="width: 80px; height: 80px;">
+                            <h5 class="font-weight-bold m-0">Bill Gates</h5>
+                            <span>American business magnate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+    <!-- Blog Start -->
+    <div class="container-fluid pt-5" id="blog">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Blog</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Latest Blog</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/chatgpt.png" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">09</h4>
+                            <small class="text-white text-uppercase">Apr</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">Exploring the Top 8 Chatbot Alternatives to ChatGPT: Free and Paid Options for Your AI Needs</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="https://medium.com/@iamjayandhan/exploring-the-top-8-chatbot-alternatives-to-chatgpt-free-and-paid-options-for-your-ai-needs-e4caf0b69f67">Read More</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/xx.png" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">04</h4>
+                            <small class="text-white text-uppercase">Mar</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">HOW TO INSTALL CHATGPT AND USE LOCALLY? POSSIBLE WITH THESE STEPS!</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="https://medium.com/@jayandhan/how-to-install-chatgpt-and-use-locally-32d3f58480c4">Read More</a>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-100" src="img/tor.png" alt="">
+                        <div class="blog-date">
+                            <h4 class="font-weight-bold mb-n1">26</h4>
+                            <small class="text-white text-uppercase">Oct</small>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-medium mb-4">ALL YOU NEED TO KNOW ABOUT TOR BROWSER/ DARKWEB GATE WAY : A COMPLETE GUIDE</h5>
+                    <a class="btn btn-sm btn-outline-primary py-2" href="https://medium.com/@jayandhan/all-you-need-to-know-about-tor-browser-gate-way-of-darkweb-complete-guide-ef26f5fb2266">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form action="https://formspree.io/f/xgebopaw"
+                        method="POST" name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" name="Name"  class="form-control p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" value=""/>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" name="E-mail"  class="form-control p-4" id="email" placeholder="Your Email"
+                                        required="required" data-validation-required-message="Please enter your email" value=""/>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" name="Subject"  class="form-control p-4" id="subject" placeholder="Subject"
+                                    required="required" data-validation-required-message="Please enter a subject" value=""/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea type="text" name="Message"  class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                    required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
+                                    Message</button>
+                                <input class="btn btn-outline-primary" type="reset" value="Clear" style="margin-left: 2rem;">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+  <script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+
+        // icon.onclick = function(){
+        //     document.body.classList.toggle("dark-theme2");
+        // }
+
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "img/red_p.png";
+        }
+        // else if(document.body.classList.contains("dark-theme2")){
+        //     icon.src = "img/sun.png";
+        // }
+        else{
+            icon.src = "img/blue_pro.png";
+        }  
+    }
+  </script>
+
+    <!-- TIDIO chatbot -->
+    <!-- <script src="//code.tidio.co/procaezxtrspcp4rmvc7d70t5cvvzuyz.js" async></script> jayandhanrajendren acc-->
+    <script src="//code.tidio.co/o3euua7ykintdvvskab0wzmplqcgt8jr.js" async></script>
+
+    <!-- from elfsight -->
+    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-2443d268-da61-4992-b56f-90f5178ee0a8"></div> -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="https://www.instagram.com/iamjayandhan/"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/iamjayandhan/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://twitter.com/iamjayandhan"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.youtube.com/@iamjayandhan"><i class="fab fa-youtube"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://medium.com/@iamjayandhan"><i class="fab fa-medium"></i></a>
+                
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="https://www.freeprivacypolicy.com/live/55601e18-485a-4d51-9065-491bbd706f48">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="https://www.termsandconditionsgenerator.com/live.php?token=VSmd2YFNJsVQ4jtOc3UYBciOVQhtoNzV">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">&copy;<a class="text-white font-weight-bold" href="#">Jayandhan</a>. All Rights Reserved. Designed by Jayandhan</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+
+
+
+<!-- 
+
+
+
+    <div class="container">
+        <div class="eyes"></div>
+        <div class="wol1"></div>
+        <div class="wol2"></div>
+        <div class="wol3"></div>
+        <div class="wol4"></div>
+        <div class="wol5"></div>
+        <div class="wol6"></div>
+    </div>
+    <div class="claws">
+        <div class="claw-one"></div>
+        <div class="claw-two"></div>
+        <div class="claw-three"></div>	
+    </div>
+
+
+  -->
+
+
+
+
+
+
+
+
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->    
+
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up" style="font-size:24px"></i></a>
+    <!-- <a href="#" class="btn btn-outline-dark px-0 py-0 back-to-top"><img src="img/project.png" alt="" style="width: 4.5rem; height: 4.5rem; "></a> -->
+
+
+
+    <!-- <i class="fa-regular fa-rocket-launch"></i> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
