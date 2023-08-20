@@ -131,7 +131,7 @@ h1 {
   border: 3px solid transparent;
   border-top-color: #16a085;
   -webkit-animation: spin 1.7s linear infinite;
-          animation: spin 1.7s linear infinite;
+  animation: spin 1.7s linear infinite;
   z-index: 11;
 }
 #loader:before {
@@ -272,7 +272,7 @@ body {
   background-color: #ffffff;
 
 
-  filter: grayscale(0);
+  /* filter: grayscale(0); */
   transition: filter 1.5s ease;
 }
 
@@ -12422,8 +12422,9 @@ h1 a:hover {
 
 
 
- 
-@keyframes jumping {
+
+
+ @keyframes jumping {
   50% { transform: translate(0, -20px) }
   100% { transform: translate(0, -0) }
 }

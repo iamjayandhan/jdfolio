@@ -1,21 +1,3 @@
-const ghostContainer = document.querySelector('.ghost-container');
-const body = document.body;
-
-ghostContainer.addEventListener('mouseenter', () => {
-  body.style.filter = 'grayscale(100%)'; // Set body to grayscale on hover
-});
-
-ghostContainer.addEventListener('mouseleave', () => {
-  body.style.filter = 'grayscale(0)'; // Reset body to color when mouse leaves ghost
-});
-
-
-
-
-
-
-
-
 (function ($) {
     "use strict";
 
@@ -136,42 +118,100 @@ ghostContainer.addEventListener('mouseleave', () => {
 function myFunction() {
     // Get the snackbar DIV
     var x = document.getElementById("snackbar");
-  
+    
     // Add the "show" class to DIV
     x.className = "show";
-  
+    
     // After 4 seconds, remove the show class from DIV
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
-  }
+    }
 
-  $(document).ready(function() {
- 
+    $(document).ready(function() {
+    
     // Fakes the loading setting a timeout
-      setTimeout(function() {
-          $('body').addClass('loaded');
-      }, 750);
-   
-  });
+        setTimeout(function() {
+            $('body').addClass('loaded');
+        }, 750);
+    
+    });
 
 $(document).ready(function() {
     $('#play-btn').click(function() {
-      $('#video-modal').modal('show');
-      $('#my-video').get(0).play();
+        $('#video-modal').modal('show');
+        $('#my-video').get(0).play();
     });
-  
+    
     $('#video-modal').on('hidden.bs.modal', function () {
-      $('#my-video').get(0).pause();
+        $('#my-video').get(0).pause();
     });
+    });
+
+
+
+
+
+
+// best but bug
+    // const ghostContainer = document.querySelector('.ghost-container');
+    // const body = document.body;
+    
+    // ghostContainer.addEventListener('mouseenter', () => {
+    // body.style.filter = 'grayscale(100%)'; // Set body to grayscale on hover
+    // });
+    
+    // ghostContainer.addEventListener('mouseleave', () => {
+    // body.style.filter = 'grayscale(0)'; // Reset body to color when mouse leaves ghost
+    // });
+
+
+//solution! but too quick
+
+    // const ghostContainer = document.querySelector('.ghost-container');
+    // const elementsToFilter = document.querySelectorAll('.element-to-filter');
+    
+    // ghostContainer.addEventListener('mouseenter', () => {
+    //   elementsToFilter.forEach(element => {
+    //     if (!element.classList.contains('navbar')) {
+    //       element.style.filter = 'grayscale(100%)'; // Apply grayscale filter to specific elements except navbar
+    //     }
+    //   });
+    // });
+    
+    // ghostContainer.addEventListener('mouseleave', () => {
+    //   elementsToFilter.forEach(element => {
+    //     element.style.filter = 'grayscale(0)'; // Reset grayscale filter on mouse leave
+    //   });
+    // });
+
+
+
+
+
+const ghostContainer = document.querySelector('.ghost-container');
+const elementsToFilter = document.querySelectorAll('.element-to-filter');
+const filterIncrement = 2; // Increase this value for slower transition
+
+ghostContainer.addEventListener('mouseenter', () => {
+  let currentFilterValue = 0; // Initial grayscale value
+
+  const filterInterval = setInterval(() => {
+    currentFilterValue += filterIncrement;
+    if (currentFilterValue <= 100) {
+      elementsToFilter.forEach(element => {
+        if (!element.classList.contains('navbar')) {
+          element.style.filter = `grayscale(${currentFilterValue}%)`;
+        }
+      });
+    } else {
+      clearInterval(filterInterval);
+    }
+  }, 20); // Interval time for smooth transition
+});
+
+ghostContainer.addEventListener('mouseleave', () => {
+  elementsToFilter.forEach(element => {
+    element.style.filter = 'grayscale(0)'; // Reset grayscale filter on mouse leave
   });
+});
 
-
-
-
-
-
-
-
-
-
-
-
+    
