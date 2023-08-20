@@ -27,8 +27,8 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  /* --primary: #0BCEAF; */
   --primary: #0BCEAF;
+  /* --primary: #3c2b2b; */
   /* --primary: linear-gradient(to top right, #fc737a 10%, #ff7c9d 65%, #ffc01a 125%); */
 
   /* animation: gradientAnimation 3s ease-in-out infinite; */
@@ -271,6 +271,9 @@ body {
   text-align: left;
   background-color: #ffffff;
 
+
+  filter: grayscale(0);
+  transition: filter 1.5s ease;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -12614,4 +12617,46 @@ h1 a:hover {
 
 .ghost-container:hover .ghost {
   animation: speak 1.5s infinite;
+}
+
+
+@keyframes makeColorless {
+  from {
+    filter: grayscale(0);
+  }
+  to {
+    filter: grayscale(100%);
+  }
+}
+
+.ghost-container:hover ~ body {
+  filter: grayscale(100%);
+  pointer-events: none; /* Disable interactions with the dimmed content */
+}
+
+
+
+
+
+
+
+
+
+/* Animation for fiery eyes */
+@keyframes fieryEyes {
+  0% {
+    background-color: #3c4d57; /* Initial color */
+  }
+  50% {
+    background-color: #ff0000; /* Transition to red */
+  }
+  100% {
+    background-color: #3c4d57; /* Back to initial color */
+  }
+}
+
+/* Apply the fiery eyes animation on hovered state */
+.ghost-container:hover .eye {
+  animation: fieryEyes 1.5s infinite;
+  background-color: #3c4d57; /* Initial color */
 }
