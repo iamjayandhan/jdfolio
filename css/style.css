@@ -12580,3 +12580,38 @@ h1 a:hover {
     width: 19%;
   }
 }
+.ghost-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.speech-bubble {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  bottom: calc(100% + 10px);
+  left: 65%;
+  width: 6rem;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.ghost-container:hover .speech-bubble {
+  opacity: 1;
+}
+
+/* Animation */
+@keyframes speak {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.ghost-container:hover .ghost {
+  animation: speak 1.5s infinite;
+}
