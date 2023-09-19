@@ -12661,3 +12661,107 @@ h1 a:hover {
   animation: fieryEyes 1.5s infinite;
   background-color: #3c4d57; /* Initial color */
 }
+
+
+
+
+
+.wrapper{
+  position: fixed;
+  bottom: 120px;
+  right: -100%;
+  max-width: 350px;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  padding: 15px 25px 22px;
+  transition: right 1.3s ease;
+  z-index: 9999; /* Set a high z-index value */
+  }
+
+  .wrapper.show {
+  right: 20px;
+  }
+
+.wrapper header{
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+header i{
+  color: var(--primary);
+  font-size: 32px;
+}
+
+header h2{
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.wrapper .data{
+  margin-top: 16px;
+}
+.wrapper .data p {
+  color: #333;
+  font-size: 16px;
+}
+.data p a {
+  color: black;
+  text-decoration: none;
+}
+.data p a:hover {
+  color: var(--primary);
+}
+
+.wrapper .buttons {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  .buttons .button {
+  border: none;
+  color: fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  background: var(--primary);
+  cursor: pointer;
+  /* width: calc(100% / 2 10px); */
+  width: calc(50% - 10px);
+  transition: all 0.2s ease;
+  }
+
+  .buttons .button:hover{
+    background-color: white;
+  }
+
+
+
+@media (max-width: 576px) {
+    .wrapper {
+        max-width: 450px; /* Adjust the width for smaller screens */
+    }
+}
+
+/* Styles for screens with a minimum width of 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 550px; /* Adjust the width for medium-sized screens */
+    }
+}
+
+/* Styles for screens with a minimum width of 992px (e.g., small desktop screens) */
+@media (max-width: 992px) {
+    .wrapper {
+        max-width: 650px; /* Adjust the width for larger screens */
+    }
+}
+
+/* Styles for screens with a minimum width of 1200px (e.g., large desktop screens) */
+@media (max-width: 1200px) {
+    .wrapper {
+        max-width: 350px; /* Adjust the width for extra-large screens */
+    }
+}
