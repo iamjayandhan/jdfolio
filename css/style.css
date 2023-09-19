@@ -12723,7 +12723,7 @@ header h2{
   }
   .buttons .button {
   border: none;
-  color: fff;
+  color: white;
   padding: 8px 0;
   border-radius: 4px;
   background: var(--primary);
