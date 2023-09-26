@@ -12898,7 +12898,7 @@ p {
 @media (max-width: 766px) {
   .text {
     width: 150%; /* Adjust the width for tablets as needed */
-    left: -10%;
+    left: -15%;
     margin-left: -40%; /* Center the text horizontally */
     top: 50%;
     margin-top: -5px; /* Center the text vertically */
