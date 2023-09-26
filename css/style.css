@@ -12765,3 +12765,154 @@ header h2{
         max-width: 350px; /* Adjust the width for extra-large screens */
     }
 }
+
+
+
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+.text {
+  position: relative;
+  width: 450px;
+  left: 37%;
+  margin-left: -225px;
+  height: 40px;
+  top: 70%;
+  margin-top:-10px;
+}
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 30rem;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: white;  /*8e44ad,2980b9,c0392b,16a085,2c3e50*/
+}
+
+.belize {
+  color: white;
+}
+
+.pomegranate {
+  color: white;
+}
+
+.green {
+  color: white;
+}
+
+.midnight {
+  color: white;
+}
+
+
+
+/* Default styles for desktop */
+.text {
+  position: relative;
+  width: 450px;
+  left: 37%;
+  margin-left: -225px;
+  height: 40px;
+  top: 70%;
+  margin-top: -10px;
+  font-size: 3rem;
+  color: white;
+}
+
+/* Media query for tablet screens */
+@media (max-width: 1200px) {
+  .text {
+    width: 100%; /* Adjust the width for tablets as needed */
+    left: 40%;
+    margin-left: -40%; /* Center the text horizontally */
+    top: 50%;
+    margin-top: -20px; /* Center the text vertically */
+    font-size: 3rem;
+    color: white;
+  }
+  .word {
+    width: auto; /* Allow the words to wrap on smaller screens */
+  }
+  .letter {
+    transform: none; /* Remove the 3D transform on letters for tablets */
+  }
+}
+
+/* Media query for mobile screens */
+
+/* Media query for screens up to 766px */
+@media (max-width: 992px) {
+  .text {
+    width: 150%; /* Adjust the width for tablets as needed */
+    left: -5%;
+    margin-left: -40%; /* Center the text horizontally */
+    top: 50%;
+    margin-top: -20px; /* Center the text vertically */
+    font-size: 3rem;
+    color: white;
+  }
+  .word {
+    width: auto; /* Allow the words to wrap on smaller screens */
+  }
+  .letter {
+    transform: none; /* Remove the 3D transform on letters for tablets */
+  }
+}
+
+@media (max-width: 766px) {
+  .text {
+    width: 150%; /* Adjust the width for tablets as needed */
+    left: -5%;
+    margin-left: -40%; /* Center the text horizontally */
+    top: 50%;
+    margin-top: -5px; /* Center the text vertically */
+    font-size: 2rem;
+    color: white;
+  }
+
+  .word {
+    width: auto; /* Allow the words to wrap on smaller screens */
+  }
+  .letter {
+    transform: none; /* Remove the 3D transform on letters for tablets */
+  }
+}
+
+
+
