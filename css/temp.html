@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodness Loader</title>
+    <style>
+        /* The Loader */
+        #loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            overflow: hidden;
+            background-color: #fff; /* Change to a light background color */
+        }
+
+        #loader {
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #FFD700; /* Golden Yellow color */
+            -webkit-animation: spin 1.7s linear infinite;
+            animation: spin 1.7s linear infinite;
+            z-index: 11;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #loader-wrapper .loader-section {
+            position: fixed;
+            top: 0;
+            width: 51%;
+            height: 100%;
+            background: #16a085; /* Green color */
+            z-index: 10;
+        }
+
+        #loader-wrapper .loader-section.section-left {
+            left: 0;
+        }
+
+        #loader-wrapper .loader-section.section-right {
+            right: 0;
+        }
+
+        /* Loaded styles */
+        .loaded #loader-wrapper .loader-section.section-left {
+            transform: translateX(-100%);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .loaded #loader-wrapper .loader-section.section-right {
+            transform: translateX(100%);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .loaded #loader {
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+
+        .loaded #loader-wrapper {
+            visibility: hidden;
+            transform: translateY(-100%);
+            transition: all 0.3s 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader"></div>   
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <!-- Simulate loaded content -->
+    <script>
+        setTimeout(function() {
+            document.body.classList.add('loaded');
+        }, 3000); // Add loaded class after 3 seconds (simulating loading completion)
+    </script>
+</body>
+</html>

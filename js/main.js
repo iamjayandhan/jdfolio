@@ -77,17 +77,23 @@
     }, {offset: '80%'});
 
 
-    // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
+// Portfolio isotope and filter
+var portfolioIsotope = $('.portfolio-container').isotope({
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows'
+});
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
+$('#portfolio-flters li').on('click', function () {
+    $("#portfolio-flters li").removeClass('active');
+    $(this).addClass('active');
+    portfolioIsotope.isotope({ filter: $(this).data('filter') });
+});
+
+// Trigger 'Achievements' filter on page load
+$(window).on('load', function () {
+    $('#portfolio-flters li[data-filter=".project"]').trigger('click');
+});
+
     
     
     // Back to top button
@@ -341,4 +347,7 @@ function splitLetters(word) {
 
 changeWord();
 setInterval(changeWord, 4000);
+
+
+
 

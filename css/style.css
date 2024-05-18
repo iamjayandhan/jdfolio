@@ -7643,6 +7643,7 @@ button.bg-dark:focus {
 
 .overflow-hidden {
   overflow: hidden !important;
+  
 }
 
 .position-static {
@@ -10150,6 +10151,7 @@ h6,
   border-radius: 4px;
   opacity: 0;
   transition: .5s;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item:hover .portfolio-btn {
@@ -12913,6 +12915,8 @@ p {
     transform: none; /* Remove the 3D transform on letters for tablets */
   }
 }
+
+
 
 
 
