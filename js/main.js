@@ -348,26 +348,3 @@ function splitLetters(word) {
 changeWord();
 setInterval(changeWord, 4000);
 
-
-
-
-// Get all elements with class "portfolio-link"
-const portfolioLinks = document.querySelectorAll('.portfolio-link');
-
-// Loop through each portfolio link
-portfolioLinks.forEach(link => {
-    // Add click event listener
-    link.addEventListener('click', function(event) {
-        // Prevent default action (following the link)
-        event.preventDefault();
-
-        // Toggle the visibility of the portfolio text
-        const portfolioText = this.querySelector('.portfolio-text');
-        if (portfolioText.style.display === 'none') {
-            portfolioText.style.display = 'block';
-        } else {
-            // If text is already visible, navigate to the project link
-            window.location.href = this.getAttribute('href');
-        }
-    });
-});
